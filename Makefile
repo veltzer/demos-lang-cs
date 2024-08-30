@@ -38,7 +38,7 @@ clean:
 
 out/build.stamp: $(SOURCES)
 	$(info doing [$@])
-	$(Q)dotnet build --nologo --verbosity quiet > /dev/null
+	$(Q)dotnet build --nologo --verbosity quiet
 	$(Q)pymakehelper touch_mkdir $@
 
 .PHONY: clean_hard

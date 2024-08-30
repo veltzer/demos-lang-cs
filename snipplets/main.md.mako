@@ -28,3 +28,10 @@ dotnet clean -v=q
 dotnet clean --nologo -v=q
 dotnet clean --nologo --verbosity quiet
 ```
+
+${"##"} To create a new project
+
+```bash
+cd src
+dotnet new console -n [NameCamelCase]
+```
