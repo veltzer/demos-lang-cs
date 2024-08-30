@@ -59,8 +59,8 @@ interface IInvestor
 class Investor : IInvestor
 {
   private string name;
-  private string observerState;
-  private Stock stock;
+  private string? observerState;
+  private Stock? stock;
   public Investor( string name )
   {
     this.name = name;
@@ -70,7 +70,7 @@ class Investor : IInvestor
     Console.WriteLine( "Notified investor {0} of {1}'s " +
       "change to {2:C}", name, stock.Symbol, stock.Price );
   }
-  public Stock Stock
+  public Stock? Stock
   {
     get{ return stock; }
     set{ stock = value; }

@@ -3,6 +3,8 @@
 using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SqlTypes;
+using System.Diagnostics;
 
 // "AbstractClass"
 
@@ -31,8 +33,8 @@ class CustomerDataObject : DataObject
 	private string connectionString =
 		"provider=Microsoft.JET.OLEDB.4.0; "
 		+ "data source=c:\\nwind.mdb";
-	private string commandString;
-	private DataSet dataSet;
+	private string? commandString;
+	private DataSet? dataSet;
  
 	// Methods
 	public override void Connect( )
@@ -51,6 +53,7 @@ class CustomerDataObject : DataObject
 
 	public override void Process()
 	{
+		Debug.Assert(dataSet!=null);
 		DataTable dataTable = dataSet.Tables["Customers"];
 		foreach( DataRow dataRow in dataTable.Rows )
 			Console.WriteLine( dataRow[ "CompanyName" ] );
