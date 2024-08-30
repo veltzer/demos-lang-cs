@@ -53,7 +53,7 @@ class SortedList
 {
 	// Fields
 	private ArrayList list = new ArrayList();
-	private SortStrategy sortstrategy;
+	private SortStrategy? sortstrategy;
 
 	// Constructors
 	public void SetSortStrategy( SortStrategy sortstrategy )
@@ -64,7 +64,7 @@ class SortedList
 	// Methods
 	public void Sort()
 	{
-		sortstrategy.Sort( list );
+		sortstrategy?.Sort( list );
 	}
 
 	public void Add( string name )

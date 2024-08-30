@@ -48,7 +48,7 @@ namespace Visitor2
 			Console.WriteLine("Dentist is treating the cat " + c);
 		}
 	}
-	public class TestMain 
+	public class TestVisitor
 	{
 		private void treatAnimal(Animal a,Visitor v) {    a.Accept(v);   }
 		private void treatAnimals(ArrayList c,Visitor v){
@@ -57,7 +57,7 @@ namespace Visitor2
 			}
 		}
 
-		public TestMain(){
+		public TestVisitor() {
 			ArrayList s = new ArrayList();
 			s.Add(new Horse("sivka")); s.Add(new Cat("vaska")); 
 			s.Add(new Horse("burka"));s.Add(new Cat("barsik"));
@@ -65,7 +65,7 @@ namespace Visitor2
 		}
 		[STAThread]
 		static void Main(string[] args)	{
-			TestMain main1 = new TestMain();
+			TestVisitor main1 = new TestVisitor();
 		}
 	}
 }

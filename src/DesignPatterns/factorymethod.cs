@@ -94,7 +94,7 @@ public class	TheClient
 	static BetterCessnaFactory m_oCF = new BetterCessnaFactory();
 	static PiperFactory	m_oPF = new PiperFactory();
 
-	public static void	Main(string[] args)
+	public static void Main(string[] args)
 	{
 		IAirplane	o;
 

@@ -11,10 +11,10 @@ class CharacterFactory
 	private Hashtable characters = new Hashtable();
 
 	// Methods
-	public Character GetCharacter( char key )
+	public Character? GetCharacter( char key )
 	{
 		// Uses "lazy initialization"
-		Character character = (Character)characters[ key ];
+		Character? character = (Character?)characters[ key ];
 		if( character == null )
 		{
 			switch( key )
@@ -132,8 +132,9 @@ public class FlyweightApp
 		// For each character use a flyweight object
 		foreach( char c in document )
 		{
-			Character character = f.GetCharacter( c );
-			character.Draw( pointSize );
+			Character? character = f.GetCharacter( c );
+			if(character!=null)
+				character.Draw( pointSize );
 		}
 	}
 } 

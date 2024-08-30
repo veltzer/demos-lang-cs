@@ -27,7 +27,7 @@ class PrototypesModule
 	{
 		prototypes[total++] = obj;
 	}
-	public static Object findAndClone( String name ) 
+	public static Object? findAndClone( String name ) 
 	{  
 		for (int i=0; i < total; i++)
 			if (prototypes[i].getName().Equals( name ))
@@ -62,7 +62,7 @@ public class PrototypeDemo
 	{
 		string []arr=new string[5]{"Garbage", "This", "That", "Nothing", "TheOther"};
 
-		Object[] objects = new Object[9];
+		Object?[] objects = new Object[9];
 		int      total   = 0;
 		for (int i=0; i < arr.Length; i++) 
 		{     
@@ -70,7 +70,10 @@ public class PrototypeDemo
 			if (objects[total] != null) 
 				total++; 
 		}
-		for (int i=0; i < total; i++) 
-			((PrototypeCommand)objects[i]).execute();
+		for (int i=0; i < total; i++) {
+			PrototypeCommand? pc = objects[i] as PrototypeCommand;
+			if(pc!=null)
+				pc.execute();
+		}
 	}  
 }

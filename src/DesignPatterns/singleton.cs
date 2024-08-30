@@ -7,7 +7,7 @@ using System.Threading;
 
 class LoadBalancer
 {
-	private static LoadBalancer balancer;
+	private static LoadBalancer? balancer;
 	private ArrayList servers = new ArrayList();
 	private Random random = new Random();
 
@@ -41,7 +41,11 @@ class LoadBalancer
 		get
 		{
 			int r = random.Next( servers.Count );
-			return servers[ r ].ToString();
+			string? s = (string?)servers[r];
+			if(s!=null) {
+				return s;
+			}
+			return "";
 		}
 	}
 }

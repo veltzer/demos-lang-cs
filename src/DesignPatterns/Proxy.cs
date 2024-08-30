@@ -1,6 +1,7 @@
 // Proxy pattern 
 
 using System;
+using System.Diagnostics;
 using System.Runtime.Remoting;
 
 // "Subject"
@@ -36,8 +37,9 @@ class MathProxy : IMath
   public MathProxy()
   {
     // Create Math instance in a different AppDomain
-    AppDomain ad = System.AppDomain.CreateDomain("MathDomain");
-    ObjectHandle o = ad.CreateInstance(
+    AppDomain ad=System.AppDomain.CurrentDomain;
+    //AppDomain ad = System.AppDomain.CreateDomain("MathDomain");
+    ObjectHandle? o = ad.CreateInstance(
 		    "Proxy",
 		    "Math",
 		    false,
@@ -47,7 +49,10 @@ class MathProxy : IMath
 		    null,
 		    null
     );
-    math = (Math) o.Unwrap();
+    Debug.Assert(o!=null);
+    Math? m=(Math?)o.Unwrap();
+    Debug.Assert(m!=null);
+    math=m;
   }
 
   // Methods

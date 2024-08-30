@@ -8,7 +8,7 @@ abstract class Approver
 {
 	// Fields
 	protected string name;
-	protected Approver successor;
+	protected Approver? successor;
 
 	// Constructors
 	public Approver( string name )

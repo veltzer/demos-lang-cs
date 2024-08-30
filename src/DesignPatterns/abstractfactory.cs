@@ -56,10 +56,7 @@ class RobustShapeFactory :  Factory
 	public override Shape createStraightInstance() { return new Rectangle(); }
 }
 
-
-
-
-class Class1
+class AbstractFactory
 {
 	static void Main(string[] args)
 	{

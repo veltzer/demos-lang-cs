@@ -7,14 +7,14 @@ using System;
 abstract class State
 {
 	// Fields
-	protected Account account;
+	protected Account? account;
 	protected double balance;
 	protected double interest;
 	protected double lowerLimit;
 	protected double upperLimit;
 
 	// Properties
-	public Account Account
+	public Account? Account
 	{
 		get{ return account; }
 		set{ account = value; }
@@ -80,7 +80,8 @@ class RedState : State
 	override public void StateChangeCheck()
 	{
 		if( balance > upperLimit )
-			account.State = new SilverState( this );
+			if(account!=null)
+				account.State = new SilverState( this );
 	}
 }
 
@@ -134,10 +135,14 @@ class SilverState : State
 
 	override public void StateChangeCheck()
 	{
-		if( balance < lowerLimit )
-			account.State = new RedState( this );
-		else if( balance > upperLimit )
-			account.State = new GoldState( this );
+		if( balance < lowerLimit ) {
+			if(account!=null)
+				account.State = new RedState( this );
+		}
+		if( balance > upperLimit ) {
+			if(account!=null)
+				account.State = new GoldState( this );
+		}
 	}
 }
 
@@ -191,10 +196,14 @@ class GoldState : State
 
 	override public void StateChangeCheck()
 	{
-		if( balance < 0.0 )
-			account.State = new RedState( this );
-		else if( balance < lowerLimit )
-			account.State = new SilverState( this );
+		if( balance < 0.0 ) {
+			if(account!=null)
+				account.State = new RedState( this );
+		}
+		if( balance < lowerLimit ) {
+			if(account!=null)
+				account.State = new SilverState( this );
+		}
 	}
 }
 

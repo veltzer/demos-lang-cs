@@ -98,8 +98,11 @@ class User
     Console.WriteLine( "---- Redo {0} levels ", levels );
     // Perform redo operations
     for( int i = 0; i < levels; i++ )
-      if( current < commands.Count - 1 )
-        ((Command)commands[ current++ ]).Execute();
+      if( current < commands.Count - 1 ) {
+        Command? c = (Command?)commands[current++];
+        if(c!=null)
+          c.Execute();
+      }
   }
 
   public void Undo( int levels )
@@ -107,8 +110,11 @@ class User
     Console.WriteLine( "---- Undo {0} levels ", levels );
     // Perform undo operations
     for( int i = 0; i < levels; i++ )
-      if( current > 0 )
-        ((Command)commands[ --current ]).UnExecute();
+      if( current > 0 ) {
+        Command? c = (Command?)commands[--current];
+        if(c!=null)
+          c.UnExecute();
+      }
   }
 
   public void Compute( char _operator, int operand )

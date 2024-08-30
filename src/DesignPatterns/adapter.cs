@@ -39,6 +39,7 @@ public class  CDrivableCessna2 : ICar
 
   public void  Drive()  {  m_oContained.Fly();  }
 }
+
 public class TheAdapterClient
 {
   public static void Main(string[] args)

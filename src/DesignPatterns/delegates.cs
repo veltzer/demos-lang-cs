@@ -5,7 +5,7 @@ namespace Creating_A_Simple_Chat_Server
 	class DChatServer 
 	{
 		public delegate void OnMsgArrived(string message);
-		private static OnMsgArrived onMsgArrived;
+		private static OnMsgArrived? onMsgArrived;
 
 		private DChatServer() {}
 
@@ -24,14 +24,17 @@ namespace Creating_A_Simple_Chat_Server
 			SendMsg(msg, null);
 		}
 
-		public static void SendMsg(string msg, object excludeClient) 
+		public static void SendMsg(string msg, object? excludeClient) 
 		{
 			if (excludeClient == null) 
 			{
-				onMsgArrived(msg);
+				if(onMsgArrived!=null)
+					onMsgArrived(msg);
 			} 
 			else 
 			{
+				if(onMsgArrived==null)
+					return;
 				Delegate[] DelegateList = onMsgArrived.GetInvocationList();
 				for (int i = 0; i < DelegateList.Length; i++) 
 				{
@@ -64,7 +67,7 @@ namespace Creating_A_Simple_Chat_Server
 
 	class Application 
 	{
-		public static void DelegatesMain() 
+		public static void Main() 
 		{
 			DChatClient cc1 = new DChatClient("1");
 			DChatClient cc2 = new DChatClient("2");
