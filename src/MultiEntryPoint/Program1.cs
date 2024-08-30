@@ -1,0 +1,9 @@
+﻿using System;
+
+class Program1
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("This is Main method from Program1");
+    }
+}
