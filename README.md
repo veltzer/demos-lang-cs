@@ -1,33 +1,43 @@
-# demos-cs
-Demos for the C sharp language
+# *demos-cs* project by Mark Veltzer
 
-## To run a specific project:
+description: Demos for the C# language
 
-```bash
-dotnet run --project src/Hello/Hello.csproj
-```
+project website: https://veltzer.github.io/demos-cs
 
-## To run a specific project with different entry point, this has to be done after clean:
+author: Mark Veltzer
 
-```bash
-dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj /p:StartupObject=Program3
-dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj --property StartupObject=Program3
-```
+version: 0.0.1
 
-## To build everything
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 
-```bash
-dotnet build
-dotnet build -v=q
-dotnet build --nologo -v=q
-dotnet build --nologo --verbosity quiet
-```
+## github
 
-## To clean everything
+![License](https://img.shields.io/github/license/veltzer/demos-cs)
 
-```bash
-dotnet clean
-dotnet clean -v=q
-dotnet clean --nologo -v=q
-dotnet clean --nologo --verbosity quiet
-```
+## build
+
+![build](https://github.com/veltzer/demos-cs/workflows/build/badge.svg)
+
+## pypi
+
+![PyPI - Status](https://img.shields.io/pypi/status/demos-cs)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/demos-cs)
+![PyPI - License](https://img.shields.io/pypi/l/demos-cs)
+![PyPI - Package Name](https://img.shields.io/pypi/v/demos-cs)
+![PyPI - Format](https://img.shields.io/pypi/format/demos-cs)
+
+## pypi download
+
+![PyPI - Downloads](https://img.shields.io/pypi/dd/demos-cs)
+![PyPI - Downloads](https://img.shields.io/pypi/dw/demos-cs)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/demos-cs)
+
+
+
+## contact me
+[mailto](mailto:mark.veltzer@gmail.com)
+![gitter](https://img.shields.io/gitter/room/veltzer/mark.veltzer)
+![discord](https://img.shields.io/discord/719336281624281119)
+![discord](https://img.shields.io/discord/719336282194444302)
+
+Mark Veltzer, Copyright © 2024
