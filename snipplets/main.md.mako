@@ -1,17 +1,17 @@
-## To run a specific project:
+${"##"} To run a specific project:
 
 ```bash
 dotnet run --project src/Hello/Hello.csproj
 ```
 
-## To run a specific project with different entry point, this has to be done after clean:
+${"##"} To run a specific project with different entry point, this has to be done after clean:
 
 ```bash
 dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj /p:StartupObject=Program3
 dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj --property StartupObject=Program3
 ```
 
-## To build everything
+${"##"} To build everything
 
 ```bash
 dotnet build
@@ -20,7 +20,7 @@ dotnet build --nologo -v=q
 dotnet build --nologo --verbosity quiet
 ```
 
-## To clean everything
+${"##"} To clean everything
 
 ```bash
 dotnet clean

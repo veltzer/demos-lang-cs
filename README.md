@@ -1,43 +1,49 @@
-# *demos-cs* project by Mark Veltzer
-
-description: Demos for the C# language
-
-project website: https://veltzer.github.io/demos-cs
-
-author: Mark Veltzer
+## demos-cs
 
 version: 0.0.1
 
-![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+description: Demos for the C# language
 
-## github
+website: https://veltzer.github.io/demos-cs
 
-![License](https://img.shields.io/github/license/veltzer/demos-cs)
-
-## build
+## Build
 
 ![build](https://github.com/veltzer/demos-cs/workflows/build/badge.svg)
 
-## pypi
 
-![PyPI - Status](https://img.shields.io/pypi/status/demos-cs)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/demos-cs)
-![PyPI - License](https://img.shields.io/pypi/l/demos-cs)
-![PyPI - Package Name](https://img.shields.io/pypi/v/demos-cs)
-![PyPI - Format](https://img.shields.io/pypi/format/demos-cs)
+## Contact
 
-## pypi download
+chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
 
-![PyPI - Downloads](https://img.shields.io/pypi/dd/demos-cs)
-![PyPI - Downloads](https://img.shields.io/pypi/dw/demos-cs)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/demos-cs)
+## To run a specific project:
 
+```bash
+dotnet run --project src/Hello/Hello.csproj
+```
 
+## To run a specific project with different entry point, this has to be done after clean:
 
-## contact me
-[mailto](mailto:mark.veltzer@gmail.com)
-![gitter](https://img.shields.io/gitter/room/veltzer/mark.veltzer)
-![discord](https://img.shields.io/discord/719336281624281119)
-![discord](https://img.shields.io/discord/719336282194444302)
+```bash
+dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj /p:StartupObject=Program3
+dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj --property StartupObject=Program3
+```
+
+## To build everything
+
+```bash
+dotnet build
+dotnet build -v=q
+dotnet build --nologo -v=q
+dotnet build --nologo --verbosity quiet
+```
+
+## To clean everything
+
+```bash
+dotnet clean
+dotnet clean -v=q
+dotnet clean --nologo -v=q
+dotnet clean --nologo --verbosity quiet
+```
 
 Mark Veltzer, Copyright © 2024
