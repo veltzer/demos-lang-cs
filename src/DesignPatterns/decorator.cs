@@ -12,12 +12,13 @@ class TextField : Widget {
    }
    public void draw() {
       Console.WriteLine("TextField: " + width + ", " + height );
-}  }
+   }
+}
                                      
 abstract class Decorator : Widget {   
    private Widget wid;                
    public Decorator( Widget w ) { wid = w; }
-   public virtual void draw()           { wid.draw(); } 
+   public virtual void draw() { wid.draw(); } 
 }
 
 class BorderDecorator : Decorator {          
