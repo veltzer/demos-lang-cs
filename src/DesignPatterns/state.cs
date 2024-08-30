@@ -262,9 +262,6 @@ class Account
 	}
 }
 
-/// <summary>
-/// StateApp test
-/// </summary>
 public class StateApp
 {
 	public static void Main( string[] args )
@@ -282,4 +279,3 @@ public class StateApp
  
 	}
 }
- 

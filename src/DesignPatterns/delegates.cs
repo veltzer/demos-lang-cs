@@ -44,10 +44,6 @@ namespace Creating_A_Simple_Chat_Server
 		}    
 	}
 
-
-	///////////////////////////////////////////////////////////////////////////////
-
-
 	class DChatClient 
 	{
 		private void onMsgArrived(string msg) 
@@ -65,11 +61,6 @@ namespace Creating_A_Simple_Chat_Server
 		}
 
 	}
-
-
-
-	///////////////////////////////////////////////////////////////////////////////
-
 
 	class Application 
 	{

@@ -79,9 +79,6 @@ class SortedList
 	}
 }
 
-/// <summary>
-/// StrategyApp test
-/// </summary>
 public class StrategyApp
 {
 	public static void Main( string[] args )

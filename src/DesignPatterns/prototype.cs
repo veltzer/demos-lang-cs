@@ -74,4 +74,3 @@ public class PrototypeDemo
 			((PrototypeCommand)objects[i]).execute();
 	}  
 }
-

@@ -1,0 +1,24 @@
+The standard coding style for C# is typically based on the official Microsoft C# Coding Conventions and the .NET Framework Design Guidelines. Here's a concise overview of some key points:
+
+Naming conventions:
+	PascalCase for class names, method names, and public members
+	camelCase for local variables and private fields
+	Use meaningful and descriptive names
+Indentation and braces:
+	Use 4 spaces for indentation (not tabs)
+	Opening braces on the same line as the statement
+	Closing braces on a new line
+Spacing:
+	One space before and after operators
+	No space between method name and parentheses
+	One space after commas in argument lists
+Organization:
+	One class per file (with some exceptions)
+	Use regions sparingly, if at all
+Comments:
+	Use XML comments for public members
+	Use // for single-line comments, /* */ for multi-line
+Other practices:
+	Prefer explicit type declarations over var when the type is not obvious
+	Use properties instead of public fields
+	Favor composition over inheritance
