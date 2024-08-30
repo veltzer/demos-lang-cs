@@ -130,5 +130,5 @@ build/
 .ipynb_checkpoints/
 
 # c#
-*/obj/
-*/bin/
+**/obj/
+**/bin/
