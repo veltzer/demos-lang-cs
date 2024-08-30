@@ -36,15 +36,22 @@ clean:
 	$(info doing [$@])
 	$(Q)-rm -f $(ALL)
 
-out/build.stamp: $(SOURCES)
-	$(info doing [$@])
-	$(Q)dotnet build --nologo --verbosity quiet
-	$(Q)pymakehelper touch_mkdir $@
-
 .PHONY: clean_hard
 clean_hard:
 	$(info doing [$@])
 	$(Q)git clean -qffxd
+
+
+.PHONY: clean_dotnet
+clean_dotnet:
+	$(info doing [$@])
+	$(Q)dotnet clean
+
+
+out/build.stamp: $(SOURCES)
+	$(info doing [$@])
+	$(Q)dotnet build --nologo --verbosity quiet
+	$(Q)pymakehelper touch_mkdir $@
 
 .PHONY: debug
 debug:
