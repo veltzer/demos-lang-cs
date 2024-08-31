@@ -3,6 +3,8 @@
 ##############
 # do you want to show the commands executed ?
 DO_MKDBG?=0
+# should we depend on the Makefile itself?
+DO_ALLDEP:=1
 
 
 #############
@@ -57,3 +59,11 @@ out/build.stamp: $(SOURCES)
 debug:
 	$(info SOURCES is $(SOURCES))
 	$(info ALL is $(ALL))
+
+############
+# all deps #
+############
+
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
