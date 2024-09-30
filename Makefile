@@ -10,7 +10,7 @@ DO_ALLDEP:=1
 #############
 # variables #
 #############
-SOURCES=$(shell find src -name "*.cs")
+SOURCES=$(shell find src -type f -and -name "*.cs")
 ALL:=out/build.stamp
 
 
