@@ -6,17 +6,12 @@ DO_MKDBG?=0
 # should we depend on the Makefile itself?
 DO_ALLDEP:=1
 
-
-#############
-# variables #
-#############
-SOURCES=$(shell find src -type f -and -name "*.cs")
-ALL:=out/build.stamp
-
-
 ########
 # code #
 ########
+SOURCES=$(shell find src -type f -and -name "*.cs")
+ALL:=out/build.stamp
+
 # silent stuff
 ifeq ($(DO_MKDBG),1)
 Q:=
