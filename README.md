@@ -53,4 +53,4 @@ cd src
 dotnet new console -n [NameCamelCase]
 ```
 
-Mark Veltzer, Copyright © 2024
+Mark Veltzer, Copyright © 2024, 2025
