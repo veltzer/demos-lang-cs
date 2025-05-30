@@ -2,7 +2,7 @@
 *demos-cs*
 ==========
 
-.. image:: https://img.shields.io/pypi/v/demos-cs
+.. image:: https://img.shields.io/pypi/v/demos-lang-cs
 
 .. image:: https://img.shields.io/github/license/veltzer/demos-cs
 
