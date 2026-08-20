@@ -4,3 +4,19 @@
 # with load_lua (the pyanyzip pattern). The pydmt mako templates are gone.
 [processor.tera]
 src_dirs = ["tera.templates"]
+
+# The Makefile built the C# solution with `dotnet build --nologo --verbosity
+# quiet`. scripts/dotnet_build.py runs that exact command; the explicit
+# processor triggers it on any source or project change. The projects target
+# net8.0; the runner's dotnet-sdk-10.0 builds them via roll-forward.
+[processor.explicit.dotnet]
+command = "scripts/dotnet_build.py"
+input_globs = ["src/**/*.cs", "src/**/*.csproj", "*.sln"]
+output_dirs = ["src/Hello/bin", "src/DesignPatterns/bin", "src/MultiEntryPoint/bin", "src/LibraryManagementSystem/bin"]
+
+# The .NET SDK builds the solution (Ubuntu ships dotnet-sdk-10.0, which builds
+# the net8.0 projects).
+[dependencies]
+system = [
+    "dotnet-sdk-10.0",
+]
