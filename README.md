@@ -1,15 +1,22 @@
-## demos-cs
-
-version: 0.0.1
+# *demos-cs* project by Mark Veltzer
 
 description: Demos for the C# language
 
-website: https://veltzer.github.io/demos-cs
+project website: https://veltzer.github.io/demos-cs
 
-## Build
+author: Mark Veltzer
+
+version: 0.0.1
+
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+## github
+
+![License](https://img.shields.io/github/license/veltzer/demos-cs)
+
+## build
 
 ![build](https://github.com/veltzer/demos-cs/workflows/build/badge.svg)
-
 ## To run a specific project:
 
 ```bash
@@ -48,8 +55,11 @@ cd src
 dotnet new console -n [NameCamelCase]
 ```
 
-## Contact
+## contact me
 
-chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
+[mailto](mailto:mark.veltzer@gmail.com)
+![gitter](https://img.shields.io/gitter/room/veltzer/mark.veltzer)
+![discord](https://img.shields.io/discord/719336281624281119)
+![discord](https://img.shields.io/discord/719336282194444302)
 
 Mark Veltzer, Copyright © 2024, 2025, 2026
