@@ -1,11 +1,11 @@
 <!-- This file is generated. Do not edit it by hand: your changes will be
      lost on the next build. Edit the template it is rendered from, or the
      values that template reads, and build again. -->
-# *demos-cs* project by Mark Veltzer
+# *demos-lang-cs* project by Mark Veltzer
 
 description: Demos for the C# language
 
-project website: https://veltzer.github.io/demos-cs
+project website: https://veltzer.github.io/demos-lang-cs
 
 author: Mark Veltzer
 
@@ -15,11 +15,11 @@ version: 0.0.1
 
 ## github
 
-![License](https://img.shields.io/github/license/veltzer/demos-cs)
+![License](https://img.shields.io/github/license/veltzer/demos-lang-cs)
 
 ## build
 
-![build](https://github.com/veltzer/demos-cs/workflows/build/badge.svg)
+![build](https://github.com/veltzer/demos-lang-cs/workflows/build/badge.svg)
 ## To run a specific project:
 
 ```bash
