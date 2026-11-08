@@ -37,7 +37,18 @@ src_files = [".rumdl.toml", "pyproject.toml", "rsconstruct.toml"]
 [processor.explicit.generic.dotnet]
 command = "scripts/dotnet_build.py"
 input_globs = ["src/**/*.cs", "src/**/*.csproj", "*.sln"]
-output_dirs = ["src/Hello/bin", "src/DesignPatterns/bin", "src/MultiEntryPoint/bin", "src/LibraryManagementSystem/bin"]
+# bin/ holds the built programs; obj/ is dotnet's restore and intermediate
+# state, which every build writes too.
+output_dirs = [
+    "src/Hello/bin",
+    "src/Hello/obj",
+    "src/DesignPatterns/bin",
+    "src/DesignPatterns/obj",
+    "src/MultiEntryPoint/bin",
+    "src/MultiEntryPoint/obj",
+    "src/LibraryManagementSystem/bin",
+    "src/LibraryManagementSystem/obj",
+]
 
 # The .NET SDK builds the solution (Ubuntu ships dotnet-sdk-10.0, which builds
 # the net8.0 projects).
