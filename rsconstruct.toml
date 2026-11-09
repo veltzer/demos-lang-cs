@@ -49,6 +49,8 @@ output_dirs = [
     "src/LibraryManagementSystem/bin",
     "src/LibraryManagementSystem/obj",
 ]
+# The restore step inside `dotnet build` fetches packages from nuget.org.
+sandbox_network = true
 
 # The .NET SDK builds the solution (Ubuntu ships dotnet-sdk-10.0, which builds
 # the net8.0 projects).
