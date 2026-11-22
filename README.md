@@ -5,7 +5,7 @@
 
 description: Demos for the C# language
 
-project website: https://veltzer.github.io/demos-lang-cs
+project website: <https://veltzer.github.io/demos-lang-cs>
 
 author: Mark Veltzer
 
