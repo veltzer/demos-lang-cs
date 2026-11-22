@@ -18,13 +18,13 @@ version: 0.0.1
 ## build
 
 ![build](https://github.com/veltzer/demos-lang-cs/workflows/build/badge.svg)
-## To run a specific project:
+## To run a specific project
 
 ```bash
 dotnet run --project src/Hello/Hello.csproj
 ```
 
-## To run a specific project with different entry point, this has to be done after clean:
+## To run a specific project with different entry point, this has to be done after clean
 
 ```bash
 dotnet run --project src/MultiEntryPoint/MultiEntryPoint.csproj /p:StartupObject=Program3
